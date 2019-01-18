@@ -25,11 +25,25 @@ import math
 
 
 def main():
+    window = rg.TurtleWindow()
+    turtle('blue', 5)
+
     print(triangle(3, 4))
 
+    window.close_on_mouse_click()
 
 def triangle(a, b):
     return math.sqrt(a**2 + b**2)
+
+def turtle(color, thickness):
+    peri = rg.SimpleTurtle
+    peri.pen = rg.Pen('green', thickness)
+    lapis = rg.SimpleTurtle
+    lapis.pen = rg.Pen(color, 5)
+
+
+
+
 
 
 ###############################################################################
@@ -102,3 +116,5 @@ def triangle(a, b):
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
 main()
+
+
