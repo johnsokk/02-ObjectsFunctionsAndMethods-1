@@ -1,3 +1,5 @@
+import rosegraphics as rg
+import math
 """
 Practice DEFINING and CALLING
      FUNCTIONS
@@ -20,26 +22,31 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
     TESTS the functions that you will write below.
     You write the tests per the _TODO_s below.
     """
-import rosegraphics as rg
-import math
+
+
 
 
 def main():
     window = rg.TurtleWindow()
+
     turtle('blue', 5)
+    turtle('pink', 30)
 
     print(triangle(3, 4))
 
     window.close_on_mouse_click()
 
+
 def triangle(a, b):
     return math.sqrt(a**2 + b**2)
 
 def turtle(color, thickness):
-    peri = rg.SimpleTurtle
+    peri = rg.SimpleTurtle()
     peri.pen = rg.Pen('green', thickness)
-    lapis = rg.SimpleTurtle
+    peri.forward(100)
+    lapis = rg.SimpleTurtle()
     lapis.pen = rg.Pen(color, 5)
+    lapis.backward(100)
 
 
 
@@ -62,7 +69,7 @@ def turtle(color, thickness):
 
 
 ###############################################################################
-# TODO: 4a.  Define a function immediately below this _TODO_.
+# DONE: 4a.  Define a function immediately below this _TODO_.
 #   It takes two arguments:
 #     -- a string that represents a color (e.g. 'red')
 #     -- a positive integer that represents the thickness of a Pen.
@@ -84,7 +91,7 @@ def turtle(color, thickness):
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 4b.  In main, CALL your function at least TWICE (with different values
+# DONE: 4b.  In main, CALL your function at least TWICE (with different values
 #   for the arguments) to test whether you defined the function correctly.
 #
 ###############################################################################
